@@ -85,13 +85,11 @@ class Navspy extends Component {
         return (
             <Container className="sticky-top mx-0" style={ navStyle }>
               <Navbar expand="md">
-                <NavbarBrand>
                   <div className="d-flex justify-content-center">
-                    <div style={divStyle}><Bubble><a style={linkStyle} href="https://www.github.com/jkguiang" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/></a></Bubble></div>
-                    <div style={divStyle}><Bubble><a style={linkStyle} href={cv} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="file-alt"/></a></Bubble></div>
-                    <div style={divStyle}><Bubble><a style={linkStyle} href="https://www.linkedin.com/in/jonathanguiang/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']}/></a></Bubble></div>
+                    <div style={divStyle}><Bubble><NavbarBrand style={linkStyle} href="https://www.github.com/jkguiang" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/></NavbarBrand></Bubble></div>
+                    <div style={divStyle}><Bubble><NavbarBrand style={linkStyle} href={cv} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="file-alt"/></NavbarBrand></Bubble></div>
+                    <div style={divStyle}><Bubble><NavbarBrand style={linkStyle} href="https://www.linkedin.com/in/jonathanguiang/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']}/></NavbarBrand></Bubble></div>
                   </div>
-                </NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
