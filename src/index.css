@@ -14,9 +14,11 @@ code {
 
 .button-a {
   text-decoration: none;
-  background-color: #DEDEDE;
-  color: #333333;
+  background-color: #FAFAFA;
   padding: 8px 24px 8px 24px;
-  border-color: #D4D4D4;
   border-radius: 20px;
+  border-top: 4px solid #D4D4D4;
+  border-right: 4px solid #D4D4D4;
+  border-bottom: 4px solid #D4D4D4;
+  border-left: 4px solid #D4D4D4;
 }

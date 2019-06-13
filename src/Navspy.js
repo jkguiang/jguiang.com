@@ -60,7 +60,7 @@ class Navspy extends Component {
             maxWidth: "100%",
             backgroundColor: "rgba(0,0,0,0)",
             textAlign: "left"
-        };//#D4D4D4
+        };
         const divStyle = {
             paddingLeft:"10px",
             paddingRight:"10px"
@@ -68,11 +68,18 @@ class Navspy extends Component {
         const linkStyle = {
             color: "#333"
         };
+        const btnStyle = {
+            borderRadius:"200px",
+            backgroundColor:"#FAFAFA",
+            borderColor:"#D4D4D4",
+            borderWidth: "4px",
+            color: "#D4D4D4"
+        }
         var counter = 0;
         const navLinks = this.props.anchors.map(anchor => {
             var isCurAnchor = this.state.curAnchor === anchor;
             var navLinkStyle = {
-                color: isCurAnchor ? "#000" : "#333",
+                color: isCurAnchor ? "#333" : "#BEC2C6",
                 fontWeight: isCurAnchor ? "bold" : "normal"
             }
             return (
@@ -86,7 +93,7 @@ class Navspy extends Component {
         return (
             <Container className="sticky-top mx-0" style={ navStyle }>
               <Navbar expand="md" className="px-0">
-                <NavbarBrand><Bubble><Button className="px-2 py-1" onClick={this.toggle} style={{ borderRadius:"200px" }}>
+                <NavbarBrand><Bubble><Button className="px-2 py-1" onClick={this.toggle} style={ btnStyle }>
                   <h2 className="mb-0"><FontAwesomeIcon icon="ellipsis-h"/></h2>
                 </Button></Bubble></NavbarBrand>
                 <ContentContainer pose={this.state.isOpen ? "visible" : "hidden"}>
