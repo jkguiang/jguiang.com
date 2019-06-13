@@ -2,7 +2,9 @@ const experiences = [
     {
         "employer": "Google Summer of Code",
         "position": "Student Developer",
-        "dates": "May 2019 - Aug. 2019",
+        "duration": "May 2019 - Aug. 2019",
+        "location": "San Diego, CA",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GSoC-icon.svg/220px-GSoC-icon.svg.png",
         "highlights": [
             {
                 "name": "Overview",
@@ -17,7 +19,9 @@ const experiences = [
     {
         "employer": "UC Santa Barbara",
         "position": "Undergraduate Student Researcher",
-        "dates": "Dec. 2016 - June 2019",
+        "duration": "Dec. 2016 - June 2019",
+        "location": "Santa Barbara, CA",
+        "image": "https://pbs.twimg.com/profile_images/1899320559/PhysicsLogo_400x400.jpg",
         "highlights": [
             {
                 "name": "Overview",
@@ -40,7 +44,9 @@ const experiences = [
     {
         "employer": "Pramantha Solutions",
         "position": "Consultant",
-        "dates": "Aug. 2016 - Dec. 2016",
+        "duration": "Aug. 2016 - Dec. 2016",
+        "location": "San Diego, CA",
+        "image": "https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/xuxcnruh6r92a3jnfe6a",
         "highlights": [
             {
                 "name": "Overview",
@@ -54,15 +60,16 @@ const universities = [
     {
         "employer": "UC San Diego",
         "position": "PhD. Physics",
-        "dates": "Sept. 2019 - Present",
+        "duration": "Sept. 2019 - Present",
+        "location": "San Diego, CA",
         "highlights": [
             {
                 "name": "GPA",
-                "desc": "N/A"
+                "desc": "N/A (Incoming)"
             },
             {
                 "name": "Relevant Coursework",
-                "desc": "Methods in Experimental Physics, Quantum Field Theory, Statistical Mechanics"
+                "desc": "N/A (Incoming)"
             },
             {
                 "name": "Fellowships/Awards",
@@ -73,7 +80,8 @@ const universities = [
     {
         "employer": "UC Santa Barbara",
         "position": "B.S. Physics",
-        "dates": "Sept. 2015 - June 2019",
+        "duration": "Sept. 2015 - June 2019",
+        "location": "Santa Barbara, CA",
         "highlights": [
             {
                 "name": "GPA",

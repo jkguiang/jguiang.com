@@ -58,7 +58,7 @@ class Navspy extends Component {
         const navStyle = {
             height: "0%",
             maxWidth: "100%",
-            backgroundColor: "rgba(0,0,0,0.1)"
+            backgroundColor: "rgba(0,0,0,0.168)"
         };
         const divStyle = {
             paddingLeft:"10px",

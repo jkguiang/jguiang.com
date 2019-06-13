@@ -52,7 +52,7 @@ class Content extends Component {
         if (!this.elem) return false;
         const top = this.elem.getBoundingClientRect().top;
         const windHeight = window.innerHeight;
-        this.setState({ isVisible: (top) >= -this.state.elemHeight*0.5 && (top+windHeight*0.1) <= windHeight });
+        this.setState({ isVisible: (top) >= -this.state.elemHeight*0.75 && (top+windHeight*0.1) <= windHeight });
         return;
     }, 100)
 
