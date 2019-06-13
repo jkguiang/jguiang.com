@@ -68,12 +68,12 @@ class Content extends Component {
         const contentStyle = {
             minWidth: "100%",
             backgroundColor: theme.color,
-            color: theme.text,
+            color: theme.text
         };
         const align = aligns[this.props.align];
         const pose = (this.state.isVisible) ? "visible" : "hidden";
         return (
-            <div ref={this.setRef} id={this.props.anchor} style={{ overflowX: "hidden" }}>
+            <div ref={this.setRef} id={this.props.anchor} style={{ overflowX: "hidden", paddingTop: "15px" }}>
               <Container className={"d-flex "+(this.props.fullscreen ? "vh-100 " : "py-5 ")+align} style={contentStyle}>
                 <div className="d-flex align-self-center w-100">
                   <ContentContainer style={{"width":"100%", "height":"100%"}} pose={pose}>

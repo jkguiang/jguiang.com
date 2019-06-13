@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container, Navbar, Nav, NavItem, NavLink,
-         Collapse, NavbarBrand, NavbarToggler } from 'reactstrap';
-import { Bubble } from './Animations.js';
+import { Container, Navbar, Nav, NavItem, NavLink, Row,
+         Collapse, NavbarBrand, NavbarToggler, Button } from 'reactstrap';
+import { Bubble, SwingLeftContent, ContentContainer } from './Animations.js';
 import cv from './latex_cv.pdf';
 import debounce from 'lodash/debounce';
 
@@ -58,8 +58,9 @@ class Navspy extends Component {
         const navStyle = {
             height: "0%",
             maxWidth: "100%",
-            backgroundColor: "rgba(0,0,0,0.168)"
-        };
+            backgroundColor: "rgba(0,0,0,0)",
+            textAlign: "left"
+        };//#D4D4D4
         const divStyle = {
             paddingLeft:"10px",
             paddingRight:"10px"
@@ -75,27 +76,24 @@ class Navspy extends Component {
                 fontWeight: isCurAnchor ? "bold" : "normal"
             }
             return (
-                <NavItem key={anchor}>
-                  <NavLink className={isCurAnchor ? "disabled" : ""} href={"#"+anchor} style={navLinkStyle}>
-                    <Bubble>{this.props.names[counter++]}</Bubble>
-                  </NavLink>
-                </NavItem>
+                <SwingLeftContent pose={this.state.isOpen ? "visible" : "hidden"} key={anchor}>
+                  <NavItem className="px-3"><Bubble><NavLink className="button-a px-3" href={"#"+anchor} style={navLinkStyle}>
+                    {this.props.names[counter++]}
+                  </NavLink></Bubble></NavItem>
+                </SwingLeftContent>
             );
         });
         return (
             <Container className="sticky-top mx-0" style={ navStyle }>
-              <Navbar expand="md">
-                  <div className="d-flex justify-content-center">
-                    <div style={divStyle}><Bubble><NavbarBrand style={linkStyle} href="https://www.github.com/jkguiang" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/></NavbarBrand></Bubble></div>
-                    <div style={divStyle}><Bubble><NavbarBrand style={linkStyle} href={cv} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="file-alt"/></NavbarBrand></Bubble></div>
-                    <div style={divStyle}><Bubble><NavbarBrand style={linkStyle} href="https://www.linkedin.com/in/jonathanguiang/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']}/></NavbarBrand></Bubble></div>
-                  </div>
-                <NavbarToggler onClick={this.toggle} />
-                <Collapse isOpen={this.state.isOpen} navbar>
+              <Navbar expand="md" className="px-0">
+                <NavbarBrand><Bubble><Button className="px-2 py-1" onClick={this.toggle} style={{ borderRadius:"200px" }}>
+                  <h2 className="mb-0"><FontAwesomeIcon icon="ellipsis-h"/></h2>
+                </Button></Bubble></NavbarBrand>
+                <ContentContainer pose={this.state.isOpen ? "visible" : "hidden"}>
                   <Nav className="ml-auto" navbar>
                     { navLinks }
                   </Nav>
-                </Collapse>
+                </ContentContainer>
               </Navbar>
             </Container>
         );

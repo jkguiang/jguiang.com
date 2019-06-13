@@ -62,6 +62,7 @@ const universities = [
         "position": "PhD. Physics",
         "duration": "Sept. 2019 - Present",
         "location": "San Diego, CA",
+        "image": "https://cdn.worldvectorlogo.com/logos/ucsd.svg",
         "highlights": [
             {
                 "name": "GPA",
@@ -82,6 +83,7 @@ const universities = [
         "position": "B.S. Physics",
         "duration": "Sept. 2015 - June 2019",
         "location": "Santa Barbara, CA",
+        "image": "https://www.ucsb.edu/sites/default/files/images/pages/Vis-ID/ucsb-seal-black.jpg",
         "highlights": [
             {
                 "name": "GPA",

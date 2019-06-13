@@ -1,11 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faPlusCircle, faSignInAlt, faCheckCircle,
-         faTachometerAlt, faUsers, faUserPlus,
-         faCloudSunRain, faCog, faMicrochip,
-         faSignOutAlt, faUser, faTimesCircle,
-         faUserEdit, faUserCheck, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faBars, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import Navspy from './Navspy.js';
 import Landing from './Landing.js';
 import Experience from './Experience.js';
@@ -13,11 +9,7 @@ import Content from './Content.js';
 import Projects from './Projects.js';
 import Education from './Education.js';
 
-library.add( fab, faPlusCircle, faSignInAlt, faCheckCircle,
-             faTachometerAlt, faUsers, faUserPlus,
-             faCloudSunRain, faCog, faMicrochip,
-             faSignOutAlt, faUser, faTimesCircle,
-             faUserEdit, faUserCheck, faFileAlt );
+library.add( fab, faFileAlt, faBars, faEllipsisH );
 
 class AppContent extends Component {
     render() {
