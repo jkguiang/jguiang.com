@@ -60,13 +60,17 @@ const universities = [
     {
         "employer": "UC San Diego",
         "position": "PhD. Physics",
-        "duration": "Sept. 2019 - Present",
+        "duration": "Sep. 2019 - Present",
         "location": "San Diego, CA",
         "image": "https://cdn.worldvectorlogo.com/logos/ucsd.svg",
         "highlights": [
             {
                 "name": "GPA",
                 "desc": "N/A (Incoming)"
+            },
+            {
+                "name": "Thesis Topic",
+                "desc": "(To be announced)"
             },
             {
                 "name": "Relevant Coursework",
@@ -81,7 +85,7 @@ const universities = [
     {
         "employer": "UC Santa Barbara",
         "position": "B.S. Physics",
-        "duration": "Sept. 2015 - June 2019",
+        "duration": "Sep. 2015 - June 2019",
         "location": "Santa Barbara, CA",
         "image": "https://www.ucsb.edu/sites/default/files/images/pages/Vis-ID/ucsb-seal-black.jpg",
         "highlights": [
