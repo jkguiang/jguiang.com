@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-width: 768px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -21,4 +22,11 @@ code {
   border-right: 4px solid #D4D4D4;
   border-bottom: 4px solid #D4D4D4;
   border-left: 4px solid #D4D4D4;
+}
+
+.parallax-bg {
+    background-image: url('https://lh3.googleusercontent.com/FR_S-4ocnBJ0G9bgWODggt69BTpG_tgbmcLHw9rCFKUdmBxece5fveKyzp8VO2VP4lWdYsyvKZUWqaAi9Mj_64vqXTpGWJ47nMMlBKFMi71312dgx1gQc92VlBNL-lw-CYvdcilTIYm6Mera_8U2bKd6txomGESb2vwRkPvuJ-UlHy9BPTkqft4Ogorw6dmafnpyvJZ7hxmc52Om7feo2GS1LIpHX0wgatBqgmhO_JJw4K4l7IJ3CrMofzjs7WGrpUMQhPpVJFQSivy3tDA4-xT12Dq-OA6Yt9nbHQsdoRB2o2ElWaFfKmUeCUHNz-7EBynd9KCVelkVOZ4taerT3fkmswLMRykoEjSFXSKORESZ74RNdRPxxY1DrgJePzpvks4AQ-ptZegLe-iEyCjmk0MVydRdmXMKBz7AiQ-yLLoMOZA441UN-Kuc4fUFSIAzFSD5xDEILfE_cDlmgz56Xx2qQVRBOXqJHi3ku03oVWEjVGS9_qdh7t2YZ_F0tpB6FjPeOTSc596ThanH8pxk7Ac-gY4uOudFVloLik2Jgn39GvGOoLo0LG3-cWYloR49Hty5jXehNzrSSnanu5KbNeAnpUw0Y2FcsCZc12Negd5Inzy9X4FbWYxmkVQPtc0hOZWw-Q4ugmL-0UmW0XGh0Xvl_b9Oxxo=w2560-h1246-no');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

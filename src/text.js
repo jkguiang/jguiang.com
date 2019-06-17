@@ -100,6 +100,10 @@ const universities = [
             {
                 "name": "Awards",
                 "desc": "Highest Academic Honors, Research Excellence Award, Distinction in the Major"
+            },
+            {
+                "name": "Activities",
+                "desc": "Robotics Club, Bachelor's Honors Senior Thesis"
             }
         ]
     }

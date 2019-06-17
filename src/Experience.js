@@ -10,8 +10,8 @@ class ExperienceCard extends Component {
             <li key={counter++}><b>{h.name}:</b> {h.desc}</li>
         );
         return (
-            <Card className="text-dark" style={{borderColor: "#D4D4D4", color:"#333"}}>
-              <CardHeader style={{backgroundColor: "#F5F5F5", borderBottomColor: "#D4D4D4"}}>
+            <Card className="text-dark" style={{ borderColor: "#D4D4D4", color:"#333" }}>
+              <CardHeader style={{ backgroundColor: "#F5F5F5", borderBottomColor: "#D4D4D4" }}>
                 <Row className="mx-0">
                 <Col md="6" className="px-0">
                   <h5 className="mb-0">{this.props.employer}</h5>
@@ -25,13 +25,13 @@ class ExperienceCard extends Component {
               </CardHeader>
               <CardBody>
                 <Row>
-                  <Col md="auto" className="align-self-center text-center">
+                  <Col lg="auto" className="align-self-center text-center">
                     <figure className="figure">
                       <img src={this.props.image} className="figure-img img-fluid rounded mb-0"
                            alt="" width="100px" height="100px"/>
                     </figure>
                   </Col>
-                <Col md="10"><ul className="mb-0">{ highlights }</ul></Col>
+                <Col lg="10"><ul className="mb-0">{ highlights }</ul></Col>
                 </Row>
               </CardBody>
             </Card>

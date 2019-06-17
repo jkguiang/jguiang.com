@@ -11,8 +11,9 @@ class Landing extends Component {
           paddingRight:"10px"
       }
       const linkStyle = {
-          color: "#000"
+          color: "#FAFAFA"
       }
+
       return (
         <Fragment>
           <SwingLeftContent pose={pose}><h1 className="display-4">Jonathan Guiang</h1></SwingLeftContent>

@@ -6,25 +6,77 @@ import Navspy from './Navspy.js';
 import Landing from './Landing.js';
 import Experience from './Experience.js';
 import Content from './Content.js';
+import Cover from './Cover.js';
 import Projects from './Projects.js';
 import Education from './Education.js';
+import debounce from 'lodash/debounce';
 
 library.add( fab, faFileAlt, faBars, faEllipsisH );
 
 class AppContent extends Component {
-    render() {
-        const children = this.props.children;
-        var anchors = []
-        var names = []
-        for (var i = 0; i < children.length; i++) {
-            var anchor = children[i].props.anchor;
-            anchors.push(anchor);
-            names.push(anchor[0].toUpperCase()+anchor.substring(1).toLowerCase());
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isOpen: false,
+            curAnchor: null,
+            cycle: false
+        };
+
+        this.anchors = [];
+        this.names = [];
+        this.isInViewport = this.isInViewport.bind(this);
+        this.checkAnchors = this.checkAnchors.bind(this);
+    }
+
+    componentDidMount() {
+        /* Set up scroll listener */
+        for (var i = 0; i < this.props.children.length; i++) {
+            var anchor = this.props.children[i].props.anchor;
+            this.anchors.push(anchor);
+            this.names.push(anchor[0].toUpperCase()+anchor.substring(1).toLowerCase());
         }
+        window.addEventListener('scroll', this.checkAnchors);
+        this.checkAnchors();
+    }
+
+    componentWillUnmount() {
+        /* Remove scroll listener */
+        window.removeEventListener('scroll', this.checkAnchors);
+    }
+
+    isInViewport(elemID) {
+        /* Check if a given element is visible */
+        const elem = document.getElementById(elemID);
+        if (!elem) return false;
+        const top = elem.getBoundingClientRect().top;
+        const elemHeight = elem.clientHeight;
+        const windHeight = window.innerHeight;
+        const isVisible = ((top) >= -elemHeight*0.5 && (top+windHeight*0.1) <= windHeight);
+        return isVisible;
+    }
+
+    checkAnchors = debounce(() => {
+        /* Check if any given anchors are visible */
+        for (var i = 0; i < this.anchors.length; i++) {
+            var anchor = this.anchors[i];
+            if (this.isInViewport(anchor)) {
+                this.setState({ curAnchor: anchor });
+            }
+        }
+    }, 100)
+
+    render() {
+        // Set visibility of children
+        const children = React.Children.map(this.props.children, child => {
+            return React.cloneElement(child, {
+                isVisible: (child.props.anchor === this.state.curAnchor)
+            });
+        });
         return (
             <Fragment>
-              <Navspy key="navspy" anchors={anchors} names={names}/>
-              { this.props.children }
+              <Navspy key="navspy" curAnchor={this.state.curAnchor} anchors={this.anchors} names={this.names}/>
+              { children }
             </Fragment>
         );
     }
@@ -34,7 +86,7 @@ class App extends Component {
   render() {
     return (
       <AppContent>
-        <Content anchor="home" theme="light" align="center" fullscreen={true}><Landing/></Content>
+        <Cover anchor="home" theme="dark" align="center" cover={true}><Landing/></Cover>
         <Content anchor="experience" theme="dark" align="left"><Experience/></Content>
         <Content anchor="projects" theme="light" align="center"><Projects/></Content>
         <Content anchor="education" theme="dark" align="left"><Education/></Content>

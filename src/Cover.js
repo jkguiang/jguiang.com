@@ -5,7 +5,7 @@ import { ContentContainer } from './Animations.js';
 const themes = {
     "dark": {
         "color": "#ECECEC",
-        "text": "#333"
+        "text": "#FAFAFA"
     },
     "light": {
         "color": "#FAFAFA",
@@ -18,7 +18,7 @@ const aligns = {
     "center": "mx-0 px-0 text-center"
 }
 
-class Content extends Component {
+class Parallax extends Component {
     render() {
         // Set visibility of children
         const children = React.Children.map(this.props.children, child => {
@@ -31,13 +31,14 @@ class Content extends Component {
         const contentStyle = {
             minWidth: "100%",
             backgroundColor: theme.color,
-            color: theme.text
+            color: theme.text,
+            textShadow: "0 0 10px rgba(0,0,0,0.25)"
         };
         const align = aligns[this.props.align];
         const pose = (this.props.isVisible) ? "visible" : "hidden";
         return (
             <div ref={this.setRef} id={this.props.anchor} style={{ overflowX: "hidden" }}>
-              <Container className={"d-flex py-5 "+align} style={contentStyle}>
+              <Container className={"d-flex vh-100 parallax-bg "+align} style={contentStyle}>
                 <div className="d-flex align-self-center w-100">
                   <ContentContainer className="w-100 h-100" pose={pose}>
                     { children }
@@ -49,4 +50,4 @@ class Content extends Component {
     }
 }
 
-export default Content;
+export default Parallax;
