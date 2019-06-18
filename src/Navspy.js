@@ -14,14 +14,33 @@ class Navspy extends Component {
         };
 
         this.toggle = this.toggle.bind(this);
+        this.handleClicks = this.handleClicks.bind(this);
     }
 
-    toggle() {
+    componentDidMount() {
+        /* Set up click listener */
+        window.addEventListener('click', this.handleClicks);
+    }
+
+    componentWillUnmount() {
+        /* Remove click listener */
+        window.removeEventListener('click', this.handleClicks);
+    }
+
+    toggle(evt, forceState=null) {
         /* Toggle visibility of navbar items, cycle animations */
-        this.setState({cycle: !this.state.cycle});
+        this.setState({
+          cycle: (forceState === null) ? !this.state.cycle : forceState
+        });
         setTimeout(() => {this.setState({
-            isOpen: !this.state.isOpen
+            isOpen: (forceState === null) ? !this.state.isOpen : forceState
         })}, this.state.isOpen ? 200 : 100);
+    }
+
+    handleClicks(evt) {
+        if (!document.getElementById("nav").contains(evt.target)) {
+            this.toggle(null, false);
+        }
     }
 
     render() {
@@ -57,15 +76,17 @@ class Navspy extends Component {
         });
         return (
             <Container className="sticky-top mx-0" style={navStyle}>
-              <Navbar expand="md" className="px-0">
+              <Navbar expand="md" className="px-0" id="nav">
                 <ContentContainer pose={this.state.cycle ? "visible" : "hidden"} className="ml-auto">
                   <Nav navbar>
                     { navLinks }
                   </Nav>
                 </ContentContainer>
-                <NavbarBrand className={this.state.isOpen ? "" : "ml-auto"}><Bubble><Button className="px-2 py-1" onClick={this.toggle} style={btnStyle}>
-                  <h2 className="mb-0"><FontAwesomeIcon icon="ellipsis-h"/></h2>
-                </Button></Bubble></NavbarBrand>
+                <NavbarBrand className={this.state.isOpen ? "" : "ml-auto"}>
+                  <Bubble><Button className="px-2 py-1" onClick={this.toggle} style={btnStyle}>
+                    <h2 className="mb-0"><FontAwesomeIcon icon="ellipsis-h"/></h2>
+                  </Button></Bubble>
+                </NavbarBrand>
               </Navbar>
             </Container>
         );
