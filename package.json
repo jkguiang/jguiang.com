@@ -2,7 +2,7 @@
   "name": "jguiang",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://jkguiang.github.io",
+  "homepage": "http://www.jguiang.com/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
