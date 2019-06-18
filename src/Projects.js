@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
          CardTitle, CardFooter, Button } from 'reactstrap';
 import { SwingLeftContent } from './Animations.js';
-import { projects } from './text.js';
+import { projects } from './assets/text.js';
 
 class ProjectCard extends Component {
     // Card, Short description, thumbnail

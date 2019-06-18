@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 import { SwingLeftContent } from './Animations.js';
-import { experiences } from './text.js';
+import { experiences } from './assets/text.js';
 
 class ExperienceCard extends Component {
     render() {

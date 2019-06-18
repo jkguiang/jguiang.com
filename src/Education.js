@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 import { SwingLeftContent } from './Animations.js';
-import { universities } from './text.js';
+import { universities } from './assets/text.js';
 
 class EducationCard extends Component {
     render() {
@@ -26,12 +26,12 @@ class EducationCard extends Component {
               <CardBody>
                 <Row>
                   <Col lg="auto" className="align-self-center text-center">
-                    <figure className="figure">
-                      <img src={this.props.image} className="figure-img img-fluid rounded mb-0"
-                           alt="" width="100px" height="100px"/>
+                    <figure className="figure my-auto">
+                      <img src={this.props.image} className="figure-img img-fluid rounded mb-0 px-1"
+                           alt="" width="250px" height="100px"/>
                     </figure>
                   </Col>
-                <Col lg="10"><ul className="mb-0">{ highlights }</ul></Col>
+                <Col lg="8"><ul className="mb-0">{ highlights }</ul></Col>
                 </Row>
               </CardBody>
             </Card>
