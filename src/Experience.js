@@ -43,7 +43,7 @@ class Experience extends Component {
     render() {
         const pose = this.props.isVisible ? "visible" : "hidden";
         var counter = 0;
-        const pages = (experiences).map((e) =>
+        const cards = (experiences).map((e) =>
             <Fragment key={counter++}>
               <SwingLeftContent pose={pose}>
                 <ExperienceCard employer={e.employer} position={e.position} duration={e.duration}
@@ -58,7 +58,7 @@ class Experience extends Component {
               <SwingLeftContent pose={pose}><p className="lead">
                 <i>Jobs I have had.</i>
               </p></SwingLeftContent>
-              { pages }
+              { cards }
             </Fragment>
         );
     }

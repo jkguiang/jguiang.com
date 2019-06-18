@@ -14,8 +14,8 @@ class EducationCard extends Component {
               <CardHeader style={{ backgroundColor: "#F5F5F5", borderBottomColor: "#D4D4D4" }}>
                 <Row className="mx-0">
                 <Col md="6" className="px-0">
-                  <h5 className="mb-0">{this.props.employer}</h5>
-                  <p className="mb-0"><i>{this.props.position}</i></p>
+                  <h5 className="mb-0">{this.props.university}</h5>
+                  <p className="mb-0"><i>{this.props.degree}</i></p>
                 </Col>
                 <Col md="6" className="text-right px-0">
                   <h5 className="lead mb-0">{this.props.location}</h5>
@@ -43,10 +43,10 @@ class Education extends Component {
     render() {
         const pose = this.props.isVisible ? "visible" : "hidden";
         var counter = 0;
-        const pages = (universities).map((u) =>
+        const cards = (universities).map((u) =>
             <Fragment key={counter++}>
               <SwingLeftContent pose={pose}>
-                <EducationCard employer={u.employer} position={u.position} duration={u.duration}
+                <EducationCard university={u.university} degree={u.degree} duration={u.duration}
                                location={u.location} image={u.image} highlights={u.highlights}/>
               </SwingLeftContent>
               <p><br/></p>
@@ -58,7 +58,7 @@ class Education extends Component {
               <SwingLeftContent pose={pose}><p className="lead">
                 <i>Libraries where I have studied.</i>
               </p></SwingLeftContent>
-              { pages }
+              { cards }
             </Fragment>
         );
     }

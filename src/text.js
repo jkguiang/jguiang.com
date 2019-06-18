@@ -58,8 +58,8 @@ const experiences = [
 
 const universities = [
     {
-        "employer": "UC San Diego",
-        "position": "PhD. Physics",
+        "university": "UC San Diego",
+        "degree": "PhD. Physics",
         "duration": "Sep. 2019 - Present",
         "location": "San Diego, CA",
         "image": "https://cdn.worldvectorlogo.com/logos/ucsd.svg",
@@ -83,8 +83,8 @@ const universities = [
         ]
     },
     {
-        "employer": "UC Santa Barbara",
-        "position": "B.S. Physics",
+        "university": "UC Santa Barbara",
+        "degree": "B.S. Physics",
         "duration": "Sep. 2015 - June 2019",
         "location": "Santa Barbara, CA",
         "image": "https://www.ucsb.edu/sites/default/files/images/pages/Vis-ID/ucsb-seal-black.jpg",
@@ -109,5 +109,21 @@ const universities = [
     }
 ];
 
-export {
-  experiences, universities  };
+const projects = [
+    {
+        "name": "Integratable",
+        "type": "Web Application",
+        "image": "https://lh3.googleusercontent.com/l8G9td_IAtmLW_dsDwxwMdgBxVQEzNJ4OK5OnBaZgDAYOjXs_bz34iNgSWtSU8D1bdreYyeWSKhIS-H-x7pqCCOpvDJf8PoGOigiXVgqfTR1MMtmw9Sthzf8d2ibBbSDP6gjq9z-txsS3Cp27DMvddTcdceE8mSIiUjc6lxf52ZmsFVWSERiCF0Ae778ntCa6xHuI1iOflV1pLZxC5ZzRyk5Kb_iGpLLhlwVn4d2UugEM8AklxszdDGmf-1smQAoVhVE86um69GdQIRxGtEMQJ3kAkQCG09dU19HbuuMdzSTDAMZTKPV9NMe1zIF8JpXm1sXA_37KNBxbQa-ww2HF88AuGTmJy9x4JpHAt1ypIrEg3v09DjciC7yaR_-2oe9pDE4deqNsKfsGXbVI6Djw187Pvkb2SzrufB2KH20fYo4Mi6L_Q2uzwYTnDrDnNFOwvyE1LJp9QX-966zyUk47C1zKi9Mh6chZV4csbFJljWRFOvzAp2ZGvwusO61ant0fPtbs9IP2_Jky60X83n7OXEZV1HsPiiU-LsLoHFueB8ZJZjzoW1tpg8Z8SHwJMEavwjGCX2AoUs1-GY2BeQkSLhnxrb0RoPE3Ps9qLufsuUuBIuf-ed7lEf5403z_GdRaE9JXi-QiDKk5l-_VSS58tMFVJs13EDWSpmFGfQbvJbg183xCj1iQqDTPqYx8M774d56qE-OEodbLPscVvZ1gRBr=w2880-h1514-no",
+        "desc": "A public tool that provides useful integrals on an interactive, modern platform. Uses a React-based frontend and evaluates known definite integrals using Javascript mathematics functions.",
+        "href": "https://github.com/jkguiang/integratable"
+    },
+    {
+        "name": "ChompChapp",
+        "type": "SB Hacks V",
+        "image": "https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/challenge_photos/000/738/601/datas/full_width.jpg",
+        "desc": "Selected as one of the top six projects of the event. Made intelligent restaurant suggestions based on subconscious user preference. Javascript/JQuery webpage served by Flask/Celery on a Redis server. Powered by a Python backend with Tensorflow and Keras ML models.",
+        "href": "https://github.com/jkguiang/integratable"
+    },
+];
+
+export { experiences, universities, projects };
