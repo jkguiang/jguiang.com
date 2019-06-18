@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jguiang.com/static/css/main.0a3122df.chunk.css",
+    "main.css": "/jguiang.com/static/css/main.cd58f4e4.chunk.css",
     "main.js": "/jguiang.com/static/js/main.e9859462.chunk.js",
     "main.js.map": "/jguiang.com/static/js/main.e9859462.chunk.js.map",
     "runtime~main.js": "/jguiang.com/static/js/runtime~main.5f3afdc3.js",
@@ -9,10 +9,10 @@
     "static/js/2.180820a2.chunk.js": "/jguiang.com/static/js/2.180820a2.chunk.js",
     "static/js/2.180820a2.chunk.js.map": "/jguiang.com/static/js/2.180820a2.chunk.js.map",
     "index.html": "/jguiang.com/index.html",
-    "precache-manifest.603dbcabcd2ee993914aa6d4e48cf52f.js": "/jguiang.com/precache-manifest.603dbcabcd2ee993914aa6d4e48cf52f.js",
+    "precache-manifest.9660cdbb5d95ebd03d0b6f69915c6448.js": "/jguiang.com/precache-manifest.9660cdbb5d95ebd03d0b6f69915c6448.js",
     "service-worker.js": "/jguiang.com/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/jguiang.com/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.0a3122df.chunk.css.map": "/jguiang.com/static/css/main.0a3122df.chunk.css.map",
+    "static/css/main.cd58f4e4.chunk.css.map": "/jguiang.com/static/css/main.cd58f4e4.chunk.css.map",
     "static/media/latex_cv.pdf": "/jguiang.com/static/media/latex_cv.4d20a3e4.pdf"
   }
 }
