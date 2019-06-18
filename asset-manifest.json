@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/jguiang.com/static/css/main.cd58f4e4.chunk.css",
-    "main.js": "/jguiang.com/static/js/main.e9859462.chunk.js",
-    "main.js.map": "/jguiang.com/static/js/main.e9859462.chunk.js.map",
-    "runtime~main.js": "/jguiang.com/static/js/runtime~main.5f3afdc3.js",
-    "runtime~main.js.map": "/jguiang.com/static/js/runtime~main.5f3afdc3.js.map",
-    "static/css/2.266e55a5.chunk.css": "/jguiang.com/static/css/2.266e55a5.chunk.css",
-    "static/js/2.180820a2.chunk.js": "/jguiang.com/static/js/2.180820a2.chunk.js",
-    "static/js/2.180820a2.chunk.js.map": "/jguiang.com/static/js/2.180820a2.chunk.js.map",
-    "index.html": "/jguiang.com/index.html",
-    "precache-manifest.9660cdbb5d95ebd03d0b6f69915c6448.js": "/jguiang.com/precache-manifest.9660cdbb5d95ebd03d0b6f69915c6448.js",
-    "service-worker.js": "/jguiang.com/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/jguiang.com/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.cd58f4e4.chunk.css.map": "/jguiang.com/static/css/main.cd58f4e4.chunk.css.map",
-    "static/media/latex_cv.pdf": "/jguiang.com/static/media/latex_cv.4d20a3e4.pdf"
+    "main.css": "/static/css/main.cd58f4e4.chunk.css",
+    "main.js": "/static/js/main.958efb46.chunk.js",
+    "main.js.map": "/static/js/main.958efb46.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.266e55a5.chunk.css": "/static/css/2.266e55a5.chunk.css",
+    "static/js/2.180820a2.chunk.js": "/static/js/2.180820a2.chunk.js",
+    "static/js/2.180820a2.chunk.js.map": "/static/js/2.180820a2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.5c132027d76fc6440af3532b6d5a6d7f.js": "/precache-manifest.5c132027d76fc6440af3532b6d5a6d7f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.cd58f4e4.chunk.css.map": "/static/css/main.cd58f4e4.chunk.css.map",
+    "static/media/latex_cv.pdf": "/static/media/latex_cv.4d20a3e4.pdf"
   }
 }
