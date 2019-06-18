@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/jguiang-dot-com/static/css/main.0a3122df.chunk.css",
-    "main.js": "/jguiang-dot-com/static/js/main.7227dff2.chunk.js",
-    "main.js.map": "/jguiang-dot-com/static/js/main.7227dff2.chunk.js.map",
-    "runtime~main.js": "/jguiang-dot-com/static/js/runtime~main.c6133af6.js",
-    "runtime~main.js.map": "/jguiang-dot-com/static/js/runtime~main.c6133af6.js.map",
-    "static/css/2.266e55a5.chunk.css": "/jguiang-dot-com/static/css/2.266e55a5.chunk.css",
-    "static/js/2.180820a2.chunk.js": "/jguiang-dot-com/static/js/2.180820a2.chunk.js",
-    "static/js/2.180820a2.chunk.js.map": "/jguiang-dot-com/static/js/2.180820a2.chunk.js.map",
-    "index.html": "/jguiang-dot-com/index.html",
-    "precache-manifest.47410f4f70941c461572cb16cb08b0e0.js": "/jguiang-dot-com/precache-manifest.47410f4f70941c461572cb16cb08b0e0.js",
-    "service-worker.js": "/jguiang-dot-com/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/jguiang-dot-com/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.0a3122df.chunk.css.map": "/jguiang-dot-com/static/css/main.0a3122df.chunk.css.map",
-    "static/media/latex_cv.pdf": "/jguiang-dot-com/static/media/latex_cv.4d20a3e4.pdf"
+    "main.css": "/jguiang.com/static/css/main.0a3122df.chunk.css",
+    "main.js": "/jguiang.com/static/js/main.e9859462.chunk.js",
+    "main.js.map": "/jguiang.com/static/js/main.e9859462.chunk.js.map",
+    "runtime~main.js": "/jguiang.com/static/js/runtime~main.5f3afdc3.js",
+    "runtime~main.js.map": "/jguiang.com/static/js/runtime~main.5f3afdc3.js.map",
+    "static/css/2.266e55a5.chunk.css": "/jguiang.com/static/css/2.266e55a5.chunk.css",
+    "static/js/2.180820a2.chunk.js": "/jguiang.com/static/js/2.180820a2.chunk.js",
+    "static/js/2.180820a2.chunk.js.map": "/jguiang.com/static/js/2.180820a2.chunk.js.map",
+    "index.html": "/jguiang.com/index.html",
+    "precache-manifest.603dbcabcd2ee993914aa6d4e48cf52f.js": "/jguiang.com/precache-manifest.603dbcabcd2ee993914aa6d4e48cf52f.js",
+    "service-worker.js": "/jguiang.com/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/jguiang.com/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.0a3122df.chunk.css.map": "/jguiang.com/static/css/main.0a3122df.chunk.css.map",
+    "static/media/latex_cv.pdf": "/jguiang.com/static/media/latex_cv.4d20a3e4.pdf"
   }
 }
