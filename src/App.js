@@ -52,11 +52,13 @@ class AppContent extends Component {
         const top = elem.getBoundingClientRect().top;
         const elemHeight = elem.clientHeight;
         const windHeight = window.innerHeight;
-        const isVisible = ((top) >= -elemHeight*0.5 && (top+windHeight*0.1) <= windHeight);
+        const isVisible = ((top) >= -elemHeight*0.75 && (top+windHeight*0.1) <= windHeight*0.5);
+        console.log(elemID+": "+JSON.stringify({"top":top, "eh":elemHeight, "wh":windHeight, "vis":isVisible}));
         return isVisible;
     }
 
     checkAnchors = debounce(() => {
+        console.log("NEW CHECK")
         /* Check if any given anchors are visible */
         for (var i = 0; i < this.anchors.length; i++) {
             var anchor = this.anchors[i];
