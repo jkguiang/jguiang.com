@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { ContentContainer } from './Animations.js';
-import debounce from 'lodash/debounce';
 
 const themes = {
     "dark": {
