@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { ContentContainer } from './Animations.js';
+import debounce from 'lodash/debounce';
 
 const themes = {
     "dark": {
@@ -19,6 +20,30 @@ const aligns = {
 }
 
 class Parallax extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            bgDisplace: "0"
+        };
+
+        this.move = this.move.bind(this);
+    }
+
+    componentDidMount() {
+        /* Set up scroll listener */
+        window.addEventListener('scroll', this.move);
+    }
+
+    componentWillUnmount() {
+        /* Remove scroll listener */
+        window.removeEventListener('scroll', this.move);
+    }
+
+    move() {
+        this.setState({ bgDisplace: String(-window.pageYOffset*0.2) });
+    }
+
     render() {
         // Set visibility of children
         const children = React.Children.map(this.props.children, child => {
@@ -32,12 +57,13 @@ class Parallax extends Component {
             minWidth: "100%",
             backgroundColor: theme.color,
             color: theme.text,
-            textShadow: "0 0 10px rgba(0,0,0,0.25)"
+            textShadow: "0 0 20px rgba(0,0,0,0.35)",
+            backgroundPosition: "center "+this.state.bgDisplace+"px",
         };
         const align = aligns[this.props.align];
         const pose = (this.props.isVisible) ? "visible" : "hidden";
         return (
-            <div ref={this.setRef} id={this.props.anchor} style={{ overflowX: "hidden" }}>
+            <div ref={this.setRef} id={this.props.anchor} style={{ overflow: "hidden" }}>
               <Container className={"d-flex vh-100 parallax-bg "+align} style={contentStyle}>
                 <div className="d-flex align-self-center w-100">
                   <ContentContainer className="w-100 h-100" pose={pose}>
