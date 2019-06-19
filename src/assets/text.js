@@ -8,6 +8,7 @@ import ucsb from './ucsb.png';
 // Images for "Projects" section
 import integrals from './integrals.jpg';
 import sbhacks_v from './sbhacks_v.jpg';
+import cover from './cover.jpg';
 
 const experiences = [
     {
@@ -133,7 +134,14 @@ const projects = [
         "type": "SB Hacks V",
         "image": sbhacks_v,
         "desc": "Selected as one of the top six projects of the event. Made intelligent restaurant suggestions based on subconscious user preference. Javascript/JQuery webpage served by Flask/Celery on a Redis server. Powered by a Python backend with Tensorflow and Keras ML models.",
-        "href": "https://github.com/jkguiang/integratable"
+        "href": "https://devpost.com/software/chompchap"
+    },
+    {
+        "name": "This Website",
+        "type": "Website",
+        "image": cover,
+        "desc": "The simple, sleek, one-page website you are currently perusing. Uses React and assets from Bootstrap and Fontawesome. Hosted by Github Pages.",
+        "href": "https://github.com/jkguiang/jguiang.com"
     },
 ];
 
