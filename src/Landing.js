@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SwingLeftContent, FadeContent, Bubble } from './Animations.js';
-import cv from './latex_cv.pdf';
+import cv from './assets/latex_cv.pdf';
 
 class Landing extends Component {
     render() {
