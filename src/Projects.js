@@ -17,7 +17,7 @@ class ProjectCard extends Component {
               </CardTitle>
               <CardText>{this.props.desc}</CardText>
             </CardBody>
-            <CardFooter><Button href={this.props.href} outline>Learn More &raquo;</Button></CardFooter>
+            <CardFooter><Button href={this.props.href} target="_blank" rel="noopener noreferrer" outline>Learn More &raquo;</Button></CardFooter>
           </Card>
         );
     }
