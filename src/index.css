@@ -14,6 +14,7 @@ code {
 }
 
 .button-a {
+  transition: all .3s ease-in-out;
   text-decoration: none;
   background-color: #FAFAFA;
   padding: 8px 24px 8px 24px;
@@ -22,6 +23,11 @@ code {
   border-right: 4px solid #D4D4D4;
   border-bottom: 4px solid #D4D4D4;
   border-left: 4px solid #D4D4D4;
+}
+
+.button-a:hover {
+  color: #333 !important;
+  border-color: #333 !important;
 }
 
 .parallax-bg {

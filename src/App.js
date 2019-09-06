@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faFileAlt, faBars, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faBars, faEllipsisH, faBriefcase, faCode, faHome,
+         faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import Navspy from './Navspy.js';
 import Landing from './Landing.js';
 import Experience from './Experience.js';
@@ -9,9 +10,9 @@ import Content from './Content.js';
 import Cover from './Cover.js';
 import Projects from './Projects.js';
 import Education from './Education.js';
-import debounce from 'lodash/debounce';
 
-library.add( fab, faFileAlt, faBars, faEllipsisH );
+library.add( fab, faFileAlt, faBars, faEllipsisH, faBriefcase, faCode, faHome,
+             faGraduationCap  );
 
 class AppContent extends Component {
     constructor(props) {
@@ -24,7 +25,12 @@ class AppContent extends Component {
         };
 
         this.anchors = [];
-        this.names = [];
+        this.sections = [
+            { "name": "Home", "icon": "home" },
+            { "name": "Experience", "icon": "briefcase" },
+            { "name": "Projects", "icon": "code" },
+            { "name": "Education", "icon": "graduation-cap" }
+        ];
         this.isInViewport = this.isInViewport.bind(this);
         this.checkAnchors = this.checkAnchors.bind(this);
     }
@@ -34,7 +40,6 @@ class AppContent extends Component {
         for (var i = 0; i < this.props.children.length; i++) {
             var anchor = this.props.children[i].props.anchor;
             this.anchors.push(anchor);
-            this.names.push(anchor[0].toUpperCase()+anchor.substring(1).toLowerCase());
         }
         window.addEventListener('scroll', this.checkAnchors);
         this.checkAnchors();
@@ -56,7 +61,7 @@ class AppContent extends Component {
         return isVisible;
     }
 
-    checkAnchors = debounce(() => {
+    checkAnchors() {
         /* Check if any given anchors are visible */
         for (var i = 0; i < this.anchors.length; i++) {
             var anchor = this.anchors[i];
@@ -64,7 +69,7 @@ class AppContent extends Component {
                 this.setState({ curAnchor: anchor });
             }
         }
-    }, 50)
+    }
 
     render() {
         // Set visibility of children
@@ -75,7 +80,7 @@ class AppContent extends Component {
         });
         return (
             <Fragment>
-              <Navspy key="navspy" curAnchor={this.state.curAnchor} anchors={this.anchors} names={this.names}/>
+              <Navspy key="navspy" curAnchor={this.state.curAnchor} anchors={this.anchors} sections={this.sections}/>
               { children }
             </Fragment>
         );

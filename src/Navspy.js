@@ -55,21 +55,23 @@ class Navspy extends Component {
             backgroundColor:"#FAFAFA",
             borderColor:"#D4D4D4",
             borderWidth: "4px",
-            color: "#D4D4D4"
+            color: "#D4D4D4",
+            boxShadow: "none",
         }
         // Set up navbar links
-        var counter = 0;
-        const navLinks = this.props.anchors.map(anchor => {
+        const navLinks = this.props.anchors.map((anchor, index) => {
             var isCurAnchor = (this.props.curAnchor === anchor);
             var navLinkStyle = {
                 color: isCurAnchor ? "#333" : "#7B7E7F",
-                fontWeight: isCurAnchor ? "bold" : "normal",
+                borderColor: isCurAnchor ? "#333" : "#D4D4D4",
                 display: this.state.isOpen ? "" : "none",
+                borderRadius: "200px"
             }
+            var section = this.props.sections[index];
             return (
-                <SwingLeftContent pose={this.state.cycle ? "visible" : "hidden"} key={counter}>
+                <SwingLeftContent pose={this.state.cycle ? "visible" : "hidden"} key={index}>
                   <NavItem className="px-3"><Bubble><NavLink className="button-a px-3" href={"#"+anchor} style={navLinkStyle}>
-                    {this.props.names[counter++]}
+                    <FontAwesomeIcon icon={section.icon}/> {section.name}
                   </NavLink></Bubble></NavItem>
                 </SwingLeftContent>
             );
@@ -83,7 +85,7 @@ class Navspy extends Component {
                   </Nav>
                 </ContentContainer>
                 <NavbarBrand className={this.state.isOpen ? "" : "ml-auto"}>
-                  <Bubble><Button className="px-2 py-1" onClick={this.toggle} style={btnStyle}>
+                  <Bubble><Button className="button-a px-2 py-1" onClick={this.toggle} style={btnStyle}>
                     <h2 className="mb-0"><FontAwesomeIcon icon="ellipsis-h"/></h2>
                   </Button></Bubble>
                 </NavbarBrand>
