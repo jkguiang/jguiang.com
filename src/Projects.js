@@ -8,7 +8,7 @@ class ProjectCard extends Component {
     // Card, Short description, thumbnail
     render() {
         return (
-          <Card className="h-100">
+          <Card className="project-card h-100">
             <CardImg top src={this.props.image} alt="Card image cap" />
             <CardBody className="project-card-body text-left">
               <CardTitle>
