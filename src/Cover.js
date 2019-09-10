@@ -4,12 +4,12 @@ import { ContentContainer } from './Animations.js';
 
 const themes = {
     "dark": {
-        "color": "#333",
+        "color": "#262626",
         "text": "#FFF"
     },
     "light": {
-        "color": "#FFF",
-        "text": "#333"
+        "color": "#F4F4F4",
+        "text": "#000"
     }
 }
 const aligns = {
