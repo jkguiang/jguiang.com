@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 import { SwingLeftContent } from './Animations.js';
 import { experiences } from './assets/text.js';
 
@@ -53,13 +53,13 @@ class Experience extends Component {
             </Fragment>
         );
         return (
-            <Fragment>
+            <Container className="px-4 pb-4">
               <SwingLeftContent pose={pose}><h1 className="display-4">Experience</h1></SwingLeftContent>
               <SwingLeftContent pose={pose}><p className="lead">
                 <i>Jobs I have had.</i>
               </p></SwingLeftContent>
               { cards }
-            </Fragment>
+            </Container>
         );
     }
 }
