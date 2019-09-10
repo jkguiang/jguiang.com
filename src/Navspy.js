@@ -44,40 +44,25 @@ class Navspy extends Component {
     }
 
     render() {
-        const navStyle = {
-            height: "0",
-            maxWidth: "100%",
-            backgroundColor: "rgba(0,0,0,0)",
-            textAlign: "left"
-        };
-        const btnStyle = {
-            borderRadius:"200px",
-            backgroundColor:"#FAFAFA",
-            borderColor:"#D4D4D4",
-            borderWidth: "4px",
-            color: "#D4D4D4",
-            boxShadow: "none",
-        }
         // Set up navbar links
         const navLinks = this.props.anchors.map((anchor, index) => {
             var isCurAnchor = (this.props.curAnchor === anchor);
-            var navLinkStyle = {
-                color: isCurAnchor ? "#333" : "#7B7E7F",
-                borderColor: isCurAnchor ? "#333" : "#D4D4D4",
-                display: this.state.isOpen ? "" : "none",
-                borderRadius: "200px"
-            }
             var section = this.props.sections[index];
             return (
                 <SwingLeftContent pose={this.state.cycle ? "visible" : "hidden"} key={index}>
-                  <NavItem className="px-3"><Bubble><NavLink className="button-a px-3" href={"#"+anchor} style={navLinkStyle}>
-                    <FontAwesomeIcon icon={section.icon}/> {section.name}
-                  </NavLink></Bubble></NavItem>
+                  <NavItem className="px-3">
+                    <Bubble>
+                      <NavLink className="bubble-btn px-3" href={"#"+anchor} active={isCurAnchor}
+                               style={{ display: this.state.isOpen ? "" : "none" }}>
+                        <FontAwesomeIcon icon={section.icon}/> {section.name}
+                      </NavLink>
+                    </Bubble>
+                  </NavItem>
                 </SwingLeftContent>
             );
         });
         return (
-            <Container className="sticky-top mx-0" style={navStyle}>
+            <Container className="sticky-top nav-container mx-0">
               <Navbar expand="md" className="px-0" id="nav">
                 <ContentContainer pose={this.state.cycle ? "visible" : "hidden"} className="ml-auto">
                   <Nav navbar>
@@ -85,7 +70,7 @@ class Navspy extends Component {
                   </Nav>
                 </ContentContainer>
                 <NavbarBrand className={this.state.isOpen ? "" : "ml-auto"}>
-                  <Bubble><Button className="button-a px-2 py-1" onClick={this.toggle} style={btnStyle}>
+                  <Bubble><Button className="nav-toggler bubble-btn px-2 py-1" onClick={this.toggle} active={this.state.isOpen}>
                     <h2 className="mb-0"><FontAwesomeIcon icon="ellipsis-h"/></h2>
                   </Button></Bubble>
                 </NavbarBrand>

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
          CardTitle, CardFooter, Button } from 'reactstrap';
-import { SwingLeftContent } from './Animations.js';
+import { Bubble, SwingLeftContent } from './Animations.js';
 import { projects } from './assets/text.js';
 
 class ProjectCard extends Component {
@@ -10,14 +10,20 @@ class ProjectCard extends Component {
         return (
           <Card className="h-100">
             <CardImg top src={this.props.image} alt="Card image cap" />
-            <CardBody className="text-left">
+            <CardBody className="project-card-body text-left">
               <CardTitle>
                 <h4 className="mb-0">{this.props.name}</h4>
                 <p><i>{this.props.type}</i></p>
               </CardTitle>
               <CardText>{this.props.desc}</CardText>
             </CardBody>
-            <CardFooter><Button href={this.props.href} target="_blank" rel="noopener noreferrer" outline>Learn More &raquo;</Button></CardFooter>
+            <CardFooter>
+              <Bubble>
+                <Button className="bubble-btn" href={this.props.href} target="_blank" rel="noopener noreferrer">
+                  Learn More &raquo;
+                </Button>
+              </Bubble>
+            </CardFooter>
           </Card>
         );
     }
