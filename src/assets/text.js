@@ -31,13 +31,13 @@ const experiences = [
     {
         "employer": "UC Santa Barbara",
         "position": "Undergraduate Student Researcher",
-        "duration": "Dec. 2016 - June 2019",
+        "duration": "Dec. 2016 - Jun. 2019",
         "location": "Santa Barbara, CA",
         "image": ucsb_physics,
         "highlights": [
             {
                 "name": "Overview",
-                "desc": "Selected and funded by Google Summer of Code. Developing open source software for CERN-HSF (High-Energy Physics Software Foundation) through the CMS Data Access project."
+                "desc": "Worked on a number of projects for a CMS High Energy research group led by Dr. Claudio Campagnari. Developed a number of experimentalist skills from circuit design and hardware construction to software development and data analysis."
             },
             {
                 "name": "Search for Rare Higgs Decays",
@@ -97,7 +97,7 @@ const universities = [
     {
         "university": "UC Santa Barbara",
         "degree": "B.S. Physics",
-        "duration": "Sep. 2015 - June 2019",
+        "duration": "Sep. 2015 - Jun. 2019",
         "location": "Santa Barbara, CA",
         "image": ucsb,
         "highlights": [
@@ -142,7 +142,7 @@ const projects = [
         "image": cover,
         "desc": "The simple, sleek, one-page website you are currently perusing. Uses React and assets from Bootstrap and Fontawesome. Hosted by Github Pages.",
         "href": "https://github.com/jkguiang/jguiang.com"
-    },
+    }
 ];
 
 export { experiences, universities, projects };
