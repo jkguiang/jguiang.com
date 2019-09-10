@@ -20,11 +20,11 @@ const experiences = [
         "highlights": [
             {
                 "name": "Overview",
-                "desc": "Selected and funded by Google Summer of Code. Developing open source software for CERN-HSF (High-Energy Physics Software Foundation) through the CMS Data Access project."
+                "desc": "Developed open source software for CERN-HSF with funding from Google Summer of Code."
             },
             {
-                "name": "CMS Data Access",
-                "desc": "Developed a set of tools for cleansing and extracting access pattern data. Put in place a modeling framework for predicting the access patterns within an alternate data access infrastructure. Funded by Google Summer of Code 2019 program."
+                "name": "TUDA",
+                "desc": "Tools for Understanding (CMS) Data Access. Produced a set of tools for cleansing, extracting, and visualizing cache access pattern data. Analyzed and presented insights provided by these tools in order to demonstrate their effectiveness."
             },
         ]
     },
