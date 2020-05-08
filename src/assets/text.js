@@ -78,7 +78,7 @@ const universities = [
         "highlights": [
             {
                 "name": "GPA",
-                "desc": "N/A (Incoming)"
+                "desc": "3.76"
             },
             {
                 "name": "Thesis Topic",
@@ -86,7 +86,7 @@ const universities = [
             },
             {
                 "name": "Relevant Coursework",
-                "desc": "N/A (Incoming)"
+                "desc": "Mathematical Methods in Physics, Classical Mechanics, Computational Physics"
             },
             {
                 "name": "Fellowships/Awards",
