@@ -24,7 +24,7 @@ const experiences = [
         "highlights": [
             {
                 "name": "VBS Higgs Analyses",
-                "desc": "Performed a variety of searches for anomalous Higgs boson couplings via the production of a Higgs and vector boson(s) by vector boson scattering. Wrote performant C++ analysis code to down-select petabytes of CMS proton-proton collision data to the megabytes relevant to analysis. Leveraged Python-based data science tools to turn that data into physics insights. Synthesized results into technical presentations and scientific publications (inpreparation) presented to an international audience of peers."
+                "desc": "Performed a variety of searches for anomalous Higgs boson couplings via the production of a Higgs and vector boson(s) by vector boson scattering. Wrote performant C++ analysis code to down-select petabytes of CMS proton-proton collision data to the megabytes relevant to analysis. Leveraged Python-based data science tools to turn that data into physics insights. Synthesized results into technical presentations and scientific publications (in preparations) presented to an international audience of peers."
             },
             {
                 "name": "Particle Tracking ML",
@@ -32,7 +32,7 @@ const experiences = [
             },
             {
                 "name": "Rucio-SENSE Interoperation",
-                "desc": "Helped manage 3 petabytes of CMS data stored at the UCSD Tier 2 computing facility which services thousands of scientists. Assisted in transfer of this data to a new system."
+                "desc": "Pioneered the interoperation of exascale software-defined networking (SENSE) with the data management software (Rucio) used at the LHC. Prototyped keystone software in Python for Rucio-SENSE interoperation. Deployed project testbed via Kubernetes."
             },
             {
                 "name": "XRootD HTTPS Benchmarking",
@@ -40,7 +40,7 @@ const experiences = [
             },
             {
                 "name": "US-CMS Tier 2 Data Manager",
-                "desc": "Conceptualized, designed, and implemented a statistical tool for data quality management with an online graphical interface for ease of use. Continued collaboration with another student in Switzerland to further improve the platform and market it to other research groups."
+                "desc": "Helped manage 3 petabytes of CMS data stored at the UCSD Tier 2 computing facility which services thousands of scientists. Assisted in transfer of this data to a new system."
             },
         ]
     },
