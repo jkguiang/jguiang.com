@@ -1,5 +1,6 @@
 // Images for "Experiences" section
 import gsoc from './gsoc.png';
+import dexcom_logo from './dexcom_logo.png';
 import ucsd_seal from './ucsd_seal.png';
 import ucsb_seal from './ucsb_seal.png';
 import pramantha from './pramantha.png';
@@ -16,9 +17,22 @@ import cover from './cover.jpg';
 
 const experiences = [
     {
+        "employer": "Dexcom",
+        "position": "Sr. Data Scientist/ML Engineer",
+        "duration": "Jul. 2024 - Present",
+        "location": "Remote",
+        "image": dexcom_logo,
+        "highlights": [
+            {
+                "name": "AI-based health features",
+                "desc": "Developed and implemented products and tools powered by AI that support the wellbeing of millions of people living with diabetes and empower them in managing their condition."
+            },
+        ]
+    },
+    {
         "employer": "Würthwein-Yagil Group",
         "position": "Graduate Student Researcher",
-        "duration": "Jan. 2020 - Present",
+        "duration": "Jan. 2020 - Jun. 2024",
         "location": "San Diego, CA",
         "image": ucsd_seal,
         "highlights": [
@@ -101,7 +115,7 @@ const universities = [
     {
         "university": "UC San Diego",
         "degree": "M.S. Physics, PhD. Physics",
-        "duration": "Sep. 2019 - Present",
+        "duration": "Sep. 2019 - Jun. 2024",
         "location": "San Diego, CA",
         "image": ucsd,
         "highlights": [
@@ -111,7 +125,7 @@ const universities = [
             },
             {
                 "name": "Thesis Topic",
-                "desc": "(To be announced)"
+                "desc": "Measurements of the Higgs Boson through Vector Boson Scattering and Software and Computing for Exascale Data Science"
             },
             {
                 "name": "Relevant Coursework",
